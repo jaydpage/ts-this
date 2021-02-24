@@ -2,6 +2,7 @@ const iGetMyThisFromContext = () => {
   return this
 }
 
+// TODO: example where arrow function are useful for maintaining the context of this
 describe('this in an arrow function', () => {
   it('the context of this is passed is passed from the caller', () => {
     // Arrange
