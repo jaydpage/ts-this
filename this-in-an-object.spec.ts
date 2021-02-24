@@ -10,7 +10,7 @@ const item = {
 }
 
 describe('this in an object', () => {
-  it('', () => {
+  it('can reference property values from within the object', () => {
     // Arrange
     // Act
     const result = item.description()
