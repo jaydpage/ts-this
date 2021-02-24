@@ -3,7 +3,7 @@ function carDescription() {
 }
 
 describe('binding the context of this', () => {
-  it('creates a new function with values from this', () => {
+  it('creates a new function with newly bound values for this', () => {
     // Arrange
     const petrolHatchback = carDescription.bind({
       fuelType: 'petrol',
@@ -51,5 +51,18 @@ describe('binding the context of this', () => {
     // Assert
     expect(result1).toEqual('electric truck')
     expect(result2).toEqual('electric truck')
+  })
+
+  it('can be used to bind the current context of this to a function', () => {
+    // Arrange
+    this.payload = { id: '123' }
+    const getPayload = function () {
+      return this.payload
+    }
+    const getActualPayload = getPayload.bind(this)
+    // Act
+    const payload = getActualPayload()
+    // Assert
+    expect(payload).toEqual(this.payload)
   })
 })

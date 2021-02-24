@@ -2,7 +2,6 @@ const iGetMyThisFromContext = () => {
   return this
 }
 
-// TODO: example where arrow function are useful for maintaining the context of this
 describe('this in an arrow function', () => {
   it('the context of this is passed is passed from the caller', () => {
     // Arrange
@@ -20,5 +19,24 @@ describe('this in an arrow function', () => {
     const result = iGetMyThisFromContext()
     // Assert
     expect(result.foo).toEqual(value)
+  })
+
+  it('maintains the same context of this versus a standard function which has a new context of this', () => {
+    // Arrange
+    this.payload = { id: '123' }
+
+    const getPayload = function () {
+      return this.payload
+    }
+
+    const getActualPayload = () => {
+      return this.payload
+    }
+    // Act
+    const payload = getPayload()
+    const actualPayload = getActualPayload()
+    // Assert
+    expect(payload).toBeUndefined()
+    expect(actualPayload).toEqual(this.payload)
   })
 })
