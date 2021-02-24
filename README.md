@@ -1,6 +1,6 @@
 # ts-this
 
-This repository demonstrates the various uses of the `this` keyword in javascript and typescript
+This repository demonstrates the various uses of the `this` keyword in typescript
 
 ### This in a function
 
@@ -8,6 +8,8 @@ This repository demonstrates the various uses of the `this` keyword in javascrip
 
 ### Binding the context of this
 
-### Call and Apply
+### Call and apply
 
 ### This in an object
+
+### This in a class
