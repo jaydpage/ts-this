@@ -8,7 +8,7 @@ This repository demonstrates the various uses of the `this` keyword in typescrip
 
 ### This in an arrow function
 
-[Tests demonstrating the this keyword in an arrow function](this-in-a-arrow-function.spec.ts)
+[Tests demonstrating the this keyword in an arrow function](this-in-an-arrow-function.spec.ts)
 
 ### Binding the context of this
 

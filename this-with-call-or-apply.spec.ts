@@ -19,7 +19,7 @@ describe('this with call', () => {
 })
 
 describe('this with apply', () => {
-  it('allows specifying the conext of this and passing in arguments', () => {
+  it('allows specifying the context of this and passing in arguments', () => {
     // Arrange
     const loudGiggle = {
       level: 'loud',

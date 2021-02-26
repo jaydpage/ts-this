@@ -3,7 +3,7 @@ const iGetMyThisFromContext = () => {
 }
 
 describe('this in an arrow function', () => {
-  it('the context of this is passed is passed from the caller', () => {
+  it('the context of this is passed from the caller', () => {
     // Arrange
     // Act
     const result = iGetMyThisFromContext()
